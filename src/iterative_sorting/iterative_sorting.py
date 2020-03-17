@@ -38,7 +38,7 @@ def bubble_sort( arr ):
         if count == 0:
             swapped = False
 
-    return arr
+    return arr 
 
 
 # STRETCH: implement the Count Sort function below
@@ -61,7 +61,6 @@ def count_sort( arr, maximum=-1 ):
     # GET THE RUNNING SUM
     for i in range(1, len(count)):
         count[i] += count[i - 1]
-
 
     new_array = [0] * len(arr)
     # MOVING IN REVERSE, PLACE THE NUMBERS INTO THE NEW ARRAY
