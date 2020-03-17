@@ -65,11 +65,10 @@ def count_sort( arr, maximum=-1 ):
 
     new_array = [0] * len(arr)
     # MOVING IN REVERSE, PLACE THE NUMBERS INTO THE NEW ARRAY
-    i = len(arr) - 1
-    while i >= 0:
+    for i in range(len(arr)-1, -1, -1):
         # NUMBERS WILL ENTER THE NEW ARRAY AT POSITION -1 OF COUNT 
         new_array[count[arr[i]] - 1] = arr[i]
+        # DECREMENT THE COUNT AFTER NUMBER IS ENTERED
         count[arr[i]] -= 1
-        i -= 1
 
     return new_array
